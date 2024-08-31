@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=Dev_pass_2024#test
+      - MYSQL_DATABASE=invesments
+      - MYSQL_ROOT_PASSWORD=Root#password_2024Investiments
+    volumes:
+      - "./data/conf.d:/etc/mysql/conf.d:ro"
